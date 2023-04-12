@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inondations</title>
+  <link rel="icon" href="medias/icone.png" />
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./navbar/navbar.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">HOME</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="water-outline"></ion-icon>
+          </span>
+          <span class="text">Inondations</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="./a-propos.html">
+          <span class="icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </span>
+          <span class="text">A propos</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="contacts.html">
+          <span class="icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </span>
+          <span class="text">Contacts</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  <section class="intro-section">
+    <div class="intro-content">
+      <h1>Bienvenue sur Inondations !</h1>
+      <p>Notre plateforme en ligne vous offre une expérience unique pour découvrir, apprendre et partager.</p>
+      <button id="enter-btn">Entrer</button>
+    </div>
+  </section>
+  <video id="v0" tabindex="0">
+    <source type="video/mp4" src="./medias/ZOOM_on_mandelieu.mp4">
+    </source>
+  </video>
+  <div id="menu">
+    <h1>Titre 1</h1><br>
+    <p>Écrire ici</p><br>
+    <audio controls>
+      <source src="#" type="audio/mpeg">
+    </audio>
+  </div>
+  <div id="menu2">
+    <h1>Titre 2</h1><br>
+    <p>Écrire ici</p><br>
+    <audio controls>
+      <source src="#" type="audio/mpeg">
+    </audio>
+  </div>
+  <div id="menu3">
+    <h1>Titre 3</h1><br>
+    <p>Écrire ici</p><br>
+    <audio controls>
+      <source src="#" type="audio/mpeg">
+    </audio>
+  </div>
+  <div id="menu4">
+    <h1>Titre 4</h1><br>
+    <p>Écrire ici</p><br>
+    <audio controls>
+      <source src="#" type="audio/mpeg">
+    </audio>
+  </div>
+  <div id="menu5">
+    <h1>Titre 5</h1><br>
+    <p>Écrire ici</p><br>
+    <audio controls>
+      <source src="#" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="pins">
+    <div id="marker" class="invisible"></div>
+    <span id="beacon" class="invisible"></span>
+    <div id="marker2" class="invisible"></div>
+    <span id="beacon2" class="invisible"></span>
+    <div id="marker3" class="invisible"></div>
+    <span id="beacon3" class="invisible"></span>
+    <div id="marker4" class="invisible"></div>
+    <span id="beacon4" class="invisible"></span>
+    <div id="marker5" class="invisible"></div>
+    <span id="beacon5" class="invisible"></span>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./index.js"></script>
+  <script type="module" src="./navbar/navbar.js"></script>
+
+</body>
+
+</html>

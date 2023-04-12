@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos</title>
+    <link rel="icon" href="medias/icone.png" />
+    <link rel="stylesheet" href="./a-propos.css">
+    <link rel="stylesheet" href="./navbar/navbar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="./index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">HOME</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="water-outline"></ion-icon>
+                    </span>
+                    <span class="text">Inondations</span>
+                </a>
+            </li>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </span>
+                    <span class="text">À propos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="contacts.html">
+                    <span class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </span>
+                    <span class="text">Contacts</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <section class="section1">
+        <div class="left1" data-aos= "fade-right" data-aos-anchor-placement = "center-center" data-aos-offset = "0" data-aos-duration="500"><p>Bienvenue sur notre site dédié à la participation de notre établissement au concours "Apprenons le risque" organisé par l'académie de Nice. Ce concours a pour but de nous sensibiliser à la gestion des risques naturels et technologiques dans notre région, en nous invitant à réfléchir aux moyens d'améliorer la gestion des crises en cas d'aléas climatiques ou environnementaux.</p></div>
+        <div class="right1" id="drop" data-aos= "fade-left" data-aos-anchor-placement = "center-center" data-aos-offset = "50" data-aos-duration="500"></div>
+    </section>
+    <section class="section2">
+        <div class="left"  data-aos= "fade-right" data-aos-anchor-placement = "center-center" data-aos-offset = "50" data-aos-duration="500">
+            <iframe src="https://my.spline.design/glassspherestutorial-05678145876200a4f9ea1e1b181836bc/" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+        <div class="right2" data-aos= "fade-left" data-aos-anchor-placement = "center-center" data-aos-offset = "0" data-aos-duration="500"><p>Dans le cadre de ce concours, nous avons choisi d'étudier les inondations. Les inondations sont un phénomène fréquent dans notre région et ont des conséquences dramatiques sur les populations et l'environnement. En étudiant les causes et les conséquences des inondations, nous avons voulu proposer des solutions pour mieux les prévenir et gérer les crises lorsque ce phénomène est présent.</p></div>
+    </section>
+    <section class="section3">
+        <div class="left3" data-aos= "fade-right" data-aos-anchor-placement = "center-center" data-aos-offset = "0" data-aos-duration="500"><p>Notre travail consiste en une réflexion prospective interdisciplinaire, en accord avec les programmes de collège et de lycée, sur l'aménagement du territoire et la prise en compte des risques naturels majeurs à l'échelle des territoires de proximité de nos élèves. Nous avons réalisé un travail d'information, de réflexion et de prospective concernant les inondations s'étant produites dans notre région dans un passé récent ou plus lointain, et avons proposé des mesures de prévention, de protection, d'adaptation ou d'atténuation.</p></div>
+        <div class="right" data-aos= "fade-left" data-aos-anchor-placement = "center-center" data-aos-offset = "50" data-aos-duration="500"><img src="./medias/image2.png" width="100%" height="100%" alt=""></div>
+    </section>
+    <section class="section4">
+        <div class="left" data-aos= "fade-right" data-aos-anchor-placement = "bottom-bottom" data-aos-offset = "-100" data-aos-duration="500"><img src="./medias/image4.png" width="100%" height="100%" alt=""></div>
+        <div class="right4" data-aos= "fade-left" data-aos-anchor-placement = "bottom-bottom" data-aos-offset = "-100" data-aos-duration="500"><p>Nous avons choisi de présenter notre travail sous forme d'un site web. Nous espérons que ce dernier pourra contribuer à sensibiliser les élèves et les citoyens à la gestion des risques naturels et technologiques dans notre région, et que nos propositions pourront être prises en compte pour améliorer la gestion des crises en cas d'inondations.</p></div>
+    </section>
+    <script type="module" src="./main.jsx"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="./navbar/navbar.js"></script>
+    <script type="module" src="./a-propos.js"></script>
+    <script type="module">
+        import AOS from 'aos';
+        import 'aos/dist/aos.css';
+        AOS.init();
+    </script>
+</body>
+
+</html>

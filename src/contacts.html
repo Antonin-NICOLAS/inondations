@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts</title>
+
+  <meta property="og:description" content="Découvrez notre site innovant dédié à la prévention et la gestion des inondations dans notre région, avec des animations, des cartes, des audios et des solutions concrètes pour mieux prévenir et gérer les crises !" />
+  <meta property="og:site_name" content="Les inondations" />
+  <meta property="og:type" content="sensatizing website" />
+  <meta property="og:title" content="Les inondations">
+  <meta property="og:image" itemprop="image" content="#">
+  <meta property="og:image:width" content="1770">
+  <meta property="og:image:height" content="893">
+  <meta property="og:updated_time" content="2023-03-15T18:36:33Z">
+  <meta name="Author" content="Antonin NICOLAS & Robert MACYGAN">
+  <meta name="Publisher" content="Antonin NICOLAS & Robert MACYGAN">
+  <meta name="Identifier-Url" content="#">
+  <meta name="Description" content="Découvrez notre site innovant dédié à la prévention et la gestion des inondations dans notre région, avec des animations, des cartes, des audios et des solutions concrètes pour mieux prévenir et gérer les crises !">
+  <meta name="Category" content="raise awareness">
+  <meta name="theme-color" content="#1b1b1b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#cfcfcf" media="(prefers-color-scheme: dark)">
+  <meta name="keywords" content="région, paca, inondations, sensibilisation, jeunes"/>
+  <link rel="icon" href="./medias/favicon.PNG" type="image/PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="icon" href="medias/icone.png" />
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="./navbar/navbar.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendmail() {
+        let name = document.getElementById("prenom").value;
+        let email = document.getElementById("email").value;
+        let objet = document.getElementById("objet").value;
+        let message = document.getElementById("message").value;
+
+        let body = "Name: " + name + "<br>" +
+            "Email: " + email + "<br>" +
+            "objet: " + objet + "<br>" +
+            "message: " + message + "<br>";
+        Email.send({
+            SecureToken: '0754576f-d12c-4dee-a667-ef79c3e9df66',
+            To: 'ant.nicolas@stanislas-cannes.com',
+            From: 'antoninnicolas547@gmail.com',
+            Subject: objet,
+            Body: body
+        }).then(
+            message => {
+                let successMessage = document.getElementById("success-message");
+                successMessage.innerHTML = "Merci pour votre commentaire envoyé avec succès !";
+            }
+        );
+        document.getElementById("formulaire").reset();
+    }
+</script>
+</head>
+
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list">
+        <a href="index.html">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">HOME</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="water-outline"></ion-icon>
+          </span>
+          <span class="text">Inondations</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="./a-propos.html">
+          <span class="icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </span>
+          <span class="text">A propos</span>
+        </a>
+      </li>
+      <li class="list active">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </span>
+          <span class="text">Contacts</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  <section>
+    <form method="post" id="formulaire">
+        <h1>Contactez-nous</h1>
+        <div class="separation"></div>
+        <div class="corps-formulaire">
+            <div class="gauche">
+                <div class="groupe">
+                    <label for="prenom">Votre Prénom</label>
+                    <input type="text" name="prenom" id="prenom" autocomplete="on" />
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="groupe">
+                    <label for="email">Votre adresse e-mail <span class="obligatoire">*</span></label>
+                    <input type="email" name="email" id="email" autocomplete="on" required />
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="groupe">
+                    <label for="objet">Objet-Sujet</label>
+                    <input type="text" name="objet" id="objet" autocomplete="off" />
+                    <i class="fas fa-mobile"></i>
+                </div>
+            </div>
+            <div class="droite">
+                <div class="groupe">
+                    <label for="message">Message <span class="obligatoire">*</span></label>
+                    <textarea name="message" id="message"
+                        placeholder="Saisissez ici... Nous serons heureux de recevoir vos commentaires ou vos conseils"
+                        required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="pied-formulaire">
+            <button type="button" onclick="sendmail()">Envoyer le message</button>
+        </div>
+        <div id="success-message"></div>
+    </form>
+</section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./navbar/navbar.js"></script>
+
+</body>
+
+</html>
