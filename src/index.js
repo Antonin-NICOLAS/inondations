@@ -100,6 +100,18 @@ function toggleMenu() {
     const beacon3 = document.querySelector('#beacon3');
     const beacon4 = document.querySelector('#beacon4');
     const beacon5 = document.querySelector('#beacon5');
+    const menuBtn20 = document.querySelector('#marker20');
+    const menuBtn21 = document.querySelector('#marker21');
+    const menuBtn22 = document.querySelector('#marker22');
+    const menuBtn23 = document.querySelector('#marker23');
+    const menu20 = document.querySelector('#menu20');
+    const menu21 = document.querySelector('#menu21');
+    const menu22 = document.querySelector('#menu22');
+    const menu23 = document.querySelector('#menu23');
+    const beacon20 = document.querySelector('#beacon20');
+    const beacon21 = document.querySelector('#beacon21');
+    const beacon22 = document.querySelector('#beacon22');
+    const beacon23 = document.querySelector('#beacon23');
 
     document.addEventListener('click', (e) => {
         if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
@@ -124,6 +136,26 @@ function toggleMenu() {
     document.addEventListener('click', (e) => {
         if (!menu5.contains(e.target) && !menuBtn5.contains(e.target)) {
             menu5.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', (e) => {
+        if (!menu20.contains(e.target) && !menuBtn20.contains(e.target)) {
+            menu20.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', (e) => {
+        if (!menu21.contains(e.target) && !menuBtn21.contains(e.target)) {
+            menu21.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', (e) => {
+        if (!menu22.contains(e.target) && !menuBtn22.contains(e.target)) {
+            menu22.classList.remove('show');
+        }
+    });
+    document.addEventListener('click', (e) => {
+        if (!menu23.contains(e.target) && !menuBtn23.contains(e.target)) {
+            menu23.classList.remove('show');
         }
     });
 
@@ -151,6 +183,26 @@ function toggleMenu() {
         menu5.classList.toggle('show');
         menuBtn5.style.backgroundColor = 'green';
         beacon5.classList.add('green');
+    });
+    menuBtn20.addEventListener('click', (e) => {
+        menu20.classList.toggle('show');
+        menuBtn20.style.backgroundColor = 'green';
+        beacon20.classList.add('green');
+    });
+    menuBtn21.addEventListener('click', (e) => {
+        menu21.classList.toggle('show');
+        menuBtn21.style.backgroundColor = 'green';
+        beacon21.classList.add('green');
+    });
+    menuBtn22.addEventListener('click', (e) => {
+        menu22.classList.toggle('show');
+        menuBtn22.style.backgroundColor = 'green';
+        beacon22.classList.add('green');
+    });
+    menuBtn23.addEventListener('click', (e) => {
+        menu23.classList.toggle('show');
+        menuBtn23.style.backgroundColor = 'green';
+        beacon23.classList.add('green');
     });
 }
 toggleMenu();
@@ -201,5 +253,50 @@ window.addEventListener('scroll', function () {
     var scrollPosition = window.scrollY;
     if (scrollPosition < 10000) {
         document.getElementById('v1').classList.add('slide-off');
+    }
+});
+
+
+//épingles apparition
+
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    if (scrollPosition >= 20000) {
+        document.getElementById('marker20').classList.add('visible');
+        document.getElementById('marker20').classList.remove('invisible');
+        document.getElementById('beacon20').classList.add('visible');
+        document.getElementById('beacon20').classList.remove('invisible');
+        document.getElementById('marker21').classList.add('visible');
+        document.getElementById('marker21').classList.remove('invisible');
+        document.getElementById('beacon21').classList.add('visible');
+        document.getElementById('beacon21').classList.remove('invisible');
+        document.getElementById('marker22').classList.add('visible');
+        document.getElementById('marker22').classList.remove('invisible');
+        document.getElementById('beacon22').classList.add('visible');
+        document.getElementById('beacon22').classList.remove('invisible');
+        document.getElementById('marker23').classList.add('visible');
+        document.getElementById('marker23').classList.remove('invisible');
+        document.getElementById('beacon23').classList.add('visible');
+        document.getElementById('beacon23').classList.remove('invisible');
+
+    } else {
+        document.getElementById('marker20').classList.remove('visible');
+        document.getElementById('marker20').classList.add('invisible');
+        document.getElementById('beacon20').classList.remove('visible');
+        document.getElementById('beacon20').classList.add('invisible');
+        document.getElementById('marker21').classList.remove('visible');
+        document.getElementById('marker21').classList.add('invisible');
+        document.getElementById('beacon21').classList.remove('visible');
+        document.getElementById('beacon21').classList.add('invisible');
+        document.getElementById('marker22').classList.remove('visible');
+        document.getElementById('marker22').classList.add('invisible');
+        document.getElementById('beacon22').classList.remove('visible');
+        document.getElementById('beacon22').classList.add('invisible');
+        document.getElementById('marker23').classList.remove('visible');
+        document.getElementById('marker23').classList.add('invisible');
+        document.getElementById('beacon23').classList.remove('visible');
+        document.getElementById('beacon23').classList.add('invisible');
+
+        document.body.style.overflowY = 'scroll';
     }
 });

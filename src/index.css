@@ -27,7 +27,7 @@ html [data-theme='dark'] {
 }
 
 body {
-  height: 22000px;
+  height: 21600px;
   width: 100%;
   position: relative;
   top: 0;
@@ -59,10 +59,15 @@ video {
   top: 53%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 0;
 }
 
 #marker:after {
-  content: '';
+  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  text-align: center;
+  content: counter(my-counter); /* affichage de la valeur du compteur */
+  transform: rotate(45deg); /* rotation du chiffre */
+  transform-origin: center;
   width: 1em;
   height: 1em;
   margin: 1em 0 0.2em 0.5em;
@@ -147,7 +152,11 @@ video {
 }
 
 #marker2:after {
-  content: '';
+  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  text-align: center;
+  content: counter(my-counter); /* affichage de la valeur du compteur */
+  transform: rotate(45deg); /* rotation du chiffre */
+  transform-origin: center;
   width: 1em;
   height: 1em;
   margin: 1em 0 0.2em 0.5em;
@@ -155,6 +164,7 @@ video {
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5), inset -2px 2px 4px hsla(0, 0, 0, .5);
+  counter-reset: my-counter 1;
 }
 
 #beacon2 {
@@ -206,10 +216,15 @@ video {
   top: 44%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 2;
 }
 
 #marker3:after {
-  content: '';
+  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  text-align: center;
+  content: counter(my-counter); /* affichage de la valeur du compteur */
+  transform: rotate(45deg); /* rotation du chiffre */
+  transform-origin: center;
   width: 1em;
   height: 1em;
   margin: 1em 0 0.2em 0.5em;
@@ -267,10 +282,13 @@ video {
   top: 42%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 3;
 }
 
 #marker4:after {
-  content: '';
+  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  text-align: center;
+  content: counter(my-counter); /* affichage de la valeur du compteur */
   width: 1em;
   height: 1em;
   margin: 1em 0 0.2em 0.5em;
@@ -278,6 +296,8 @@ video {
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5), inset -2px 2px 4px hsla(0, 0, 0, .5);
+  transform: rotate(45deg); /* rotation du chiffre */
+  transform-origin: center;
 }
 
 #beacon4 {
@@ -329,10 +349,15 @@ video {
   top: 55%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 4;
 }
 
 #marker5:after {
-  content: '';
+  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  text-align: center;
+  content: counter(my-counter); /* affichage de la valeur du compteur */
+  transform: rotate(45deg); /* rotation du chiffre */
+  transform-origin: center;
   width: 1em;
   height: 1em;
   margin: 1em 0 0.2em 0.5em;
@@ -375,7 +400,24 @@ video {
   animation-delay: 1s;
 }
 
-#beacon.green::before, #beacon2.green::before, #beacon3.green::before, #beacon4.green::before, #beacon5.green::before, #beacon.green::after, #beacon2.green::after, #beacon3.green::after, #beacon4.green::after, #beacon5.green::after {
+#beacon.green::before, 
+#beacon2.green::before, 
+#beacon3.green::before, 
+#beacon4.green::before, 
+#beacon5.green::before, 
+#beacon.green::after, 
+#beacon2.green::after, 
+#beacon3.green::after, 
+#beacon4.green::after, 
+#beacon5.green::after,
+#beacon20.green::before, 
+#beacon21.green::before, 
+#beacon22.green::before, 
+#beacon23.green::before, 
+#beacon20.green::after, 
+#beacon21.green::after, 
+#beacon22.green::after, 
+#beacon23.green::after {
   box-shadow: 0 0 0 3px #00ff00;
 }
 /*animation*/
@@ -391,29 +433,34 @@ video {
 
 /*menus*/
 #menu {
-  position: fixed;
-  text-align: center;
-  padding: 10px;
-  top: 0;
-  right: -50%;
-  margin-top: 2.5%;
-  height: 95%;
-  margin-bottom: 2.5%;
-  width: 48.5%;
-  margin-right: 1.5%;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 20px;
-  z-index: 9998;
-  transition: transform 0.3s ease-in-out;
+    position: fixed;
+    text-align: center;
+    overflow-y: scroll;
+    max-height: 95%;
+    padding: 10px;
+    top: 0;
+    right: -50%;
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    width: 48.5%;
+    margin-right: 1.5%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    z-index: 9998;
+    transition: transform 0.3s ease-in-out;
 }
 #menu2 {
   position: fixed;
   text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
   padding: 10px;
   top: 0;
   right: -50%;
   margin-top: 2.5%;
-  height: 95%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2.5%;
   width: 48.5%;
   margin-right: 1.5%;
@@ -425,11 +472,14 @@ video {
 #menu3 {
   position: fixed;
   text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
   padding: 10px;
   top: 0;
   right: 100%;
   margin-top: 2.5%;
-  height: 95%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2.5%;
   width: 48.5%;
   margin-left: 1.5%;
@@ -441,11 +491,14 @@ video {
 #menu4 {
   position: fixed;
   text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
   padding: 10px;
   top: 0;
   right: -50%;
   margin-top: 2.5%;
-  height: 95%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2.5%;
   width: 48.5%;
   margin-right: 1.5%;
@@ -457,11 +510,14 @@ video {
 #menu5 {
   position: fixed;
   text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
   padding: 10px;
   top: 0;
   right: 100%;
   margin-top: 2.5%;
-  height: 95%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2.5%;
   width: 48.5%;
   margin-left: 1.5%;
@@ -471,38 +527,44 @@ video {
   transition: transform 0.3s ease-in-out;
 }
 
-#menu.show, #menu2.show, #menu4.show{
+#menu.show, #menu2.show, #menu4.show,#menu21.show, #menu22.show{
   transform: translateX(-103.1%);
 }
-#menu3.show, #menu5.show{
+#menu3.show, #menu5.show, #menu20.show, #menu23.show{
   transform: translateX(103.1%);
 }
 /*/*//*/
 contenu menus
 /*/
-#menu h1, #menu2 h1,#menu3 h1,#menu4 h1,#menu5 h1{
+#menu h1, #menu2 h1,#menu3 h1,#menu4 h1,#menu20 h1, #menu21 h1,#menu22 h1,#menu23 h1,#menu5 h1{
   color: #348fc7;
   font-family: 'Sigmar One';
-  line-height: 3vw;
+  line-height: 2.3vw;
   font-size: 2vw;
-  letter-spacing: 3px;
 }
-#menu p, #menu2 p, #menu3 p, #menu4 p, #menu5 p{
+#menu p, #menu2 p, #menu3 p, #menu4 p, #menu5, #menu20 p, #menu21 p, #menu22 p, #menu23 p{
   font-family: 'Arial', sans-serif;
   text-align: justify;
   font-size: 1.5vw;
   color: #010101;
+  margin-bottom: 20px;
 }
 
 /*audios*/
-
+.audio-container{
+  position: sticky;
+  height: 50px;
+  z-index: 30;
+  left: 2.5%;
+  right: 2.5%;
+  bottom: 0px;
+}
 audio {
-  width: calc(100% - 60px);
+  width: 100%;
   height: 40px;
   background-color: #348fc7; 
   border: none;
   border-radius: 8px;
-  margin: 0 20px;
 }
 
 audio::-webkit-media-controls-panel {
@@ -606,4 +668,252 @@ audio::-webkit-media-controls-mute-button {
   100% {
     transform: translateX(50%);
   }
+}
+
+
+
+/*/*//*/
+video2
+/*/
+
+#marker20 {
+  transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+  transform-origin: 50% 50%;
+  border-radius: 50% 50% 50% 0;
+  padding: 0 3px 3px 0;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ed1f34;
+  z-index: 12;
+  position: fixed;
+  left: 48%;
+  top: 53%;
+  margin: -2.2em 0 0 -1.3em;
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 0;
+}
+
+#marker20:after, #marker21:after, #marker22:after, #marker23:after {
+  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  text-align: center;
+  content: counter(my-counter); /* affichage de la valeur du compteur */
+  transform: rotate(45deg); /* rotation du chiffre */
+  transform-origin: center;
+  width: 1em;
+  height: 1em;
+  margin: 1em 0 0.2em 0.5em;
+  background: #ffffff;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5), inset -2px 2px 4px hsla(0, 0, 0, .5);
+}
+
+#beacon20 {
+  position: fixed;
+  z-index: 11;
+  top: 53%;
+  left: 48%;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+#beacon20:before,
+#beacon20:after,
+#beacon21:before,
+#beacon21:after,
+#beacon22:before,
+#beacon22:after,
+#beacon23:before,
+#beacon23:after {
+  position: absolute;
+  content: "";
+  height: 3em;
+  width: 3em;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #ed1f34;
+  -webkit-animation: active 2s infinite linear;
+  -moz-animation: active 2s infinite linear;
+  animation: active 2s infinite linear;
+}
+
+#beacon20:after,#beacon21:after,#beacon22:after,#beacon23:after {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+/*beacon21*/
+#marker21 {
+  transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+  transform-origin: 50% 50%;
+  border-radius: 50% 50% 50% 0;
+  padding: 0 3px 3px 0;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ed1f34;
+  z-index: 12;
+  position: fixed;
+  left: 56%;
+  top: 59%;
+  margin: -2.2em 0 0 -1.3em;
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 1;
+}
+
+#beacon21 {
+  position: fixed;
+  z-index: 11;
+  top: 59%;
+  left: 56%;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+/*beacon22*/
+#marker22 {
+  transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+  transform-origin: 50% 50%;
+  border-radius: 50% 50% 50% 0;
+  padding: 0 3px 3px 0;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ed1f34;
+  z-index: 12;
+  position: fixed;
+  left: 59%;
+  top: 70%;
+  margin: -2.2em 0 0 -1.3em;
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 2;
+}
+
+#beacon22 {
+  position: fixed;
+  z-index: 11;
+  top: 70%;
+  left: 59%;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/*beacon23*/
+#marker23 {
+  transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+  transform-origin: 50% 50%;
+  border-radius: 50% 50% 50% 0;
+  padding: 0 3px 3px 0;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ed1f34;
+  z-index: 12;
+  position: fixed;
+  left: 52%;
+  top: 80%;
+  margin: -2.2em 0 0 -1.3em;
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+  counter-reset: my-counter 3;
+}
+
+#beacon23 {
+  position: fixed;
+  z-index: 11;
+  top: 80%;
+  left: 52%;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+/*/*//*/
+video2 menus
+/*/
+#menu20 {
+  position: fixed;
+  text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
+  padding: 10px;
+  top: 0;
+  right: 100%;
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5%;
+  width: 48.5%;
+  margin-right: 1.5%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  z-index: 9998;
+  transition: transform 0.3s ease-in-out;
+}
+#menu21 {
+  position: fixed;
+  text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
+  padding: 10px;
+  top: 0;
+  right: -50%;
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5%;
+  width: 48.5%;
+  margin-right: 1.5%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  z-index: 9998;
+  transition: transform 0.3s ease-in-out;
+}
+#menu22 {
+  position: fixed;
+  text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
+  padding: 10px;
+  top: 0;
+  right: -50%;
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5%;
+  width: 48.5%;
+  margin-right: 1.5%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  z-index: 9998;
+  transition: transform 0.3s ease-in-out;
+}
+#menu23 {
+  position: fixed;
+  text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
+  padding: 10px;
+  top: 0;
+  right: 100%;
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5%;
+  width: 48.5%;
+  margin-right: 1.5%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  z-index: 9998;
+  transition: transform 0.3s ease-in-out;
+}
+body div p img{
+  width: 100%;
 }
