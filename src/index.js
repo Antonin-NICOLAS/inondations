@@ -1,24 +1,41 @@
-//video animation
+// video 1 animation
+let position1 = 0;
+const vitesse1 = 1200;
+const video1 = document.getElementById("v0");
 
-let position = 0;
-const vitesse = 1200;
-const video = document.querySelector("video");
+// video 2 animation
+let position2 = 0;
+const vitesse2 = 1200;
+const video2 = document.getElementById("v1");
 
-window.requestAnimationFrame(avanceVideo);
+window.requestAnimationFrame(avanceVideos);
 
-function avanceVideo() {
-    position = window.pageYOffset / vitesse;
-    if (video.readyState >= 3) {
-        video.currentTime = position;
+function avanceVideos() {
+  let scrollPosition = window.pageYOffset;
+
+  // syncroniser video 1
+  position1 = scrollPosition / vitesse1;
+  if (video1.readyState >= 3) {
+    video1.currentTime = position1;
+  }
+
+  // syncroniser video 2
+  if (scrollPosition >= 10000) {
+    position2 = (scrollPosition - 10000) / vitesse2;
+    if (video2.readyState >= 3) {
+      video2.currentTime = position2;
     }
-    window.requestAnimationFrame(avanceVideo);
+  }
+
+  window.requestAnimationFrame(avanceVideos);
 }
+
 
 //épingles apparition
 
 window.addEventListener('scroll', function () {
     var scrollPosition = window.scrollY;
-    if (scrollPosition >= 8500) {
+    if (scrollPosition >= 8500 && scrollPosition < 10000) {
         document.getElementById('marker').classList.add('visible');
         document.getElementById('marker').classList.remove('invisible');
         document.getElementById('beacon').classList.add('visible');
@@ -62,7 +79,6 @@ window.addEventListener('scroll', function () {
         document.getElementById('beacon5').classList.remove('visible');
         document.getElementById('beacon5').classList.add('invisible');
 
-        // Toujours bloquer le scroll si on n'est pas sur les épingles
         document.body.style.overflowY = 'scroll';
     }
 });
@@ -79,6 +95,11 @@ function toggleMenu() {
     const menu3 = document.querySelector('#menu3');
     const menu4 = document.querySelector('#menu4');
     const menu5 = document.querySelector('#menu5');
+    const beacon = document.querySelector('#beacon');
+    const beacon2 = document.querySelector('#beacon2');
+    const beacon3 = document.querySelector('#beacon3');
+    const beacon4 = document.querySelector('#beacon4');
+    const beacon5 = document.querySelector('#beacon5');
 
     document.addEventListener('click', (e) => {
         if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
@@ -109,22 +130,27 @@ function toggleMenu() {
     menuBtn.addEventListener('click', (e) => {
         menu.classList.toggle('show');
         menuBtn.style.backgroundColor = 'green';
+        beacon.classList.add('green');
     });
     menuBtn2.addEventListener('click', (e) => {
         menu2.classList.toggle('show');
         menuBtn2.style.backgroundColor = 'green';
+        beacon2.classList.add('green');
     });
     menuBtn3.addEventListener('click', (e) => {
         menu3.classList.toggle('show');
         menuBtn3.style.backgroundColor = 'green';
+        beacon3.classList.add('green');
     });
     menuBtn4.addEventListener('click', (e) => {
         menu4.classList.toggle('show');
         menuBtn4.style.backgroundColor = 'green';
+        beacon4.classList.add('green');
     });
     menuBtn5.addEventListener('click', (e) => {
         menu5.classList.toggle('show');
         menuBtn5.style.backgroundColor = 'green';
+        beacon5.classList.add('green');
     });
 }
 toggleMenu();
@@ -133,7 +159,47 @@ toggleMenu();
 //hero section
 const introSection = document.querySelector('.intro-section');
 const enterBtn = document.getElementById('enter-btn');
+const body = document.querySelector('body');
 
-enterBtn.addEventListener('click', function() {
-  introSection.style.display = 'none';
+enterBtn.addEventListener('click', function () {
+    introSection.style.display = 'none';
+    body.style.overflow = 'visible';
+});
+
+body.style.overflow = 'hidden';
+
+//video2
+
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    if (scrollPosition > 10000) {
+        document.getElementById('v1').classList.add('slide-in');
+        document.getElementById('v1').classList.remove('slide-off');
+        document.getElementById('marker').classList.remove('visible');
+        document.getElementById('marker').classList.add('invisible');
+        document.getElementById('beacon').classList.remove('visible');
+        document.getElementById('beacon').classList.add('invisible');
+        document.getElementById('marker2').classList.remove('visible');
+        document.getElementById('marker2').classList.add('invisible');
+        document.getElementById('beacon2').classList.remove('visible');
+        document.getElementById('beacon2').classList.add('invisible');
+        document.getElementById('marker3').classList.remove('visible');
+        document.getElementById('marker3').classList.add('invisible');
+        document.getElementById('beacon3').classList.remove('visible');
+        document.getElementById('beacon3').classList.add('invisible');
+        document.getElementById('marker4').classList.remove('visible');
+        document.getElementById('marker4').classList.add('invisible');
+        document.getElementById('beacon4').classList.remove('visible');
+        document.getElementById('beacon4').classList.add('invisible');
+        document.getElementById('marker5').classList.remove('visible');
+        document.getElementById('marker5').classList.add('invisible');
+        document.getElementById('beacon5').classList.remove('visible');
+        document.getElementById('beacon5').classList.add('invisible');
+    }
+});
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    if (scrollPosition < 10000) {
+        document.getElementById('v1').classList.add('slide-off');
+    }
 });

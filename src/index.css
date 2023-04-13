@@ -27,7 +27,7 @@ html [data-theme='dark'] {
 }
 
 body {
-  height: 13000px;
+  height: 22000px;
   width: 100%;
   position: relative;
   top: 0;
@@ -374,6 +374,10 @@ video {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
+
+#beacon.green::before, #beacon2.green::before, #beacon3.green::before, #beacon4.green::before, #beacon5.green::before, #beacon.green::after, #beacon2.green::after, #beacon3.green::after, #beacon4.green::after, #beacon5.green::after {
+  box-shadow: 0 0 0 3px #00ff00;
+}
 /*animation*/
 .invisible{
   opacity: 0;
@@ -479,12 +483,13 @@ contenu menus
 #menu h1, #menu2 h1,#menu3 h1,#menu4 h1,#menu5 h1{
   color: #348fc7;
   font-family: 'Sigmar One';
-  line-height: 5vw;
-  font-size: 5vw;
+  line-height: 3vw;
+  font-size: 2vw;
   letter-spacing: 3px;
 }
 #menu p, #menu2 p, #menu3 p, #menu4 p, #menu5 p{
-  font-family: 'conthrax';
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
   font-size: 1.5vw;
   color: #010101;
 }
@@ -497,7 +502,7 @@ audio {
   background-color: #348fc7; 
   border: none;
   border-radius: 8px;
-  margin: 10px 20px;
+  margin: 0 20px;
 }
 
 audio::-webkit-media-controls-panel {
@@ -534,6 +539,7 @@ audio::-webkit-media-controls-mute-button {
 /*hero section*/
 .intro-section {
   position: relative;
+  background-color: rgb(1, 1, 16);
   height: 100vh;
   width: 100%;
 }
@@ -543,6 +549,7 @@ audio::-webkit-media-controls-mute-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #c6c7b8;
   text-align: center;
   z-index: 1;
 }
@@ -558,10 +565,45 @@ audio::-webkit-media-controls-mute-button {
 }
 
 #enter-btn {
-  background-color: #fff;
-  border: 2px solid #000;
-  color: #000;
+  background-color: rgb(1, 1, 16);
+  color: #c6c7b8;
   font-size: 1.5rem;
+  border: rgb(1, 1, 16);
   padding: 1rem 2rem;
   cursor: pointer;
+}
+
+/*video2*/
+
+#v1{
+  height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%);
+}
+#v1.slide-in {
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+#v1.slide-off {
+  animation: slide-off 1s forwards;
+}
+
+@keyframes slide-off {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
 }
