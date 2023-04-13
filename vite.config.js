@@ -20,6 +20,7 @@ export default {
         rollupOptions: {
           input: {
             main: resolve(__dirname, 'src/index.html'),
+            inondations: resolve(__dirname, 'src/inondations.html'),
             apropos: resolve(__dirname, 'src/a-propos.html'),
             contact: resolve(__dirname, 'src/contacts.html'),
           },
