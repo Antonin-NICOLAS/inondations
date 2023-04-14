@@ -11,23 +11,23 @@ const video2 = document.getElementById("v1");
 window.requestAnimationFrame(avanceVideos);
 
 function avanceVideos() {
-  let scrollPosition = window.pageYOffset;
+    let scrollPosition = window.pageYOffset;
 
-  // syncroniser video 1
-  position1 = scrollPosition / vitesse1;
-  if (video1.readyState >= 3) {
-    video1.currentTime = position1;
-  }
-
-  // syncroniser video 2
-  if (scrollPosition >= 10000) {
-    position2 = (scrollPosition - 10000) / vitesse2;
-    if (video2.readyState >= 3) {
-      video2.currentTime = position2;
+    // syncroniser video 1
+    position1 = scrollPosition / vitesse1;
+    if (video1.readyState >= 3) {
+        video1.currentTime = position1;
     }
-  }
 
-  window.requestAnimationFrame(avanceVideos);
+    // syncroniser video 2
+    if (scrollPosition >= 10000) {
+        position2 = (scrollPosition - 10000) / vitesse2;
+        if (video2.readyState >= 3) {
+            video2.currentTime = position2;
+        }
+    }
+
+    window.requestAnimationFrame(avanceVideos);
 }
 
 //épingles apparition
@@ -79,6 +79,83 @@ window.addEventListener('scroll', function () {
         document.getElementById('beacon5').classList.add('invisible');
 
         document.body.style.overflowY = 'scroll';
+    }
+});
+//video2
+
+window.addEventListener('scroll', function () {
+    var video = document.getElementById('v1');
+    var scrollPosition = window.scrollY;
+    if (scrollPosition > 10000) {
+        video.style.zIndex = '16'
+        document.getElementById('v1').classList.add('slide-in');
+        document.getElementById('v1').classList.remove('slide-off');
+    }
+    if (scrollPosition < 9800) {
+        video.style.zIndex = '0';
+    }
+    if (scrollPosition < 10000) {
+        document.getElementById('v1').classList.add('slide-off');
+        document.getElementById('v1').classList.remove('slide-in');
+    }
+});
+
+window.addEventListener('scroll', function () {
+    var conclusion = document.getElementById('concl-section');
+    var scrollPosition = window.scrollY;
+    if (scrollPosition > 32000) {
+        conclusion.style.zIndex = '100'
+        document.getElementById('concl-section').classList.add('up');
+        document.getElementById('concl-section').classList.remove('down');
+    }
+    if (scrollPosition < 31000) {
+        conclusion.style.zIndex = '0';
+    }
+    if (scrollPosition < 32000) {
+        document.getElementById('concl-section').classList.add('down');
+        document.getElementById('concl-section').classList.remove('up');
+    }
+    console.log(scrollPosition)
+});
+//épingles apparition
+
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    if (scrollPosition >= 20000 && scrollPosition <= 24200) {
+        document.getElementById('marker20').classList.add('visible');
+        document.getElementById('marker20').classList.remove('invisible');
+        document.getElementById('beacon20').classList.add('visible');
+        document.getElementById('beacon20').classList.remove('invisible');
+        document.getElementById('marker21').classList.add('visible');
+        document.getElementById('marker21').classList.remove('invisible');
+        document.getElementById('beacon21').classList.add('visible');
+        document.getElementById('beacon21').classList.remove('invisible');
+        document.getElementById('marker22').classList.add('visible');
+        document.getElementById('marker22').classList.remove('invisible');
+        document.getElementById('beacon22').classList.add('visible');
+        document.getElementById('beacon22').classList.remove('invisible');
+        document.getElementById('marker23').classList.add('visible');
+        document.getElementById('marker23').classList.remove('invisible');
+        document.getElementById('beacon23').classList.add('visible');
+        document.getElementById('beacon23').classList.remove('invisible');
+    }
+    else{
+        document.getElementById('marker20').classList.add('invisible');
+        document.getElementById('marker20').classList.remove('visible');
+        document.getElementById('beacon20').classList.add('invisible');
+        document.getElementById('beacon20').classList.remove('visible');
+        document.getElementById('marker21').classList.add('invisible');
+        document.getElementById('marker21').classList.remove('visible');
+        document.getElementById('beacon21').classList.add('invisible');
+        document.getElementById('beacon21').classList.remove('visible');
+        document.getElementById('marker22').classList.add('invisible');
+        document.getElementById('marker22').classList.remove('visible');
+        document.getElementById('beacon22').classList.add('invisible');
+        document.getElementById('beacon22').classList.remove('visible');
+        document.getElementById('marker23').classList.add('invisible');
+        document.getElementById('marker23').classList.remove('visible');
+        document.getElementById('beacon23').classList.add('invisible');
+        document.getElementById('beacon23').classList.remove('visible');
     }
 });
 
@@ -218,104 +295,3 @@ enterBtn.addEventListener('click', function () {
 });
 
 body.style.overflow = 'hidden';
-
-//video2
-
-window.addEventListener('scroll', function () {
-    var scrollPosition = window.scrollY;
-    if (scrollPosition > 10000) {
-        document.getElementById('v1').classList.add('slide-in');
-        document.getElementById('v1').classList.remove('slide-off');
-        document.getElementById('marker').classList.remove('visible');
-        document.getElementById('marker').classList.add('invisible');
-        document.getElementById('beacon').classList.remove('visible');
-        document.getElementById('beacon').classList.add('invisible');
-        document.getElementById('marker2').classList.remove('visible');
-        document.getElementById('marker2').classList.add('invisible');
-        document.getElementById('beacon2').classList.remove('visible');
-        document.getElementById('beacon2').classList.add('invisible');
-        document.getElementById('marker3').classList.remove('visible');
-        document.getElementById('marker3').classList.add('invisible');
-        document.getElementById('beacon3').classList.remove('visible');
-        document.getElementById('beacon3').classList.add('invisible');
-        document.getElementById('marker4').classList.remove('visible');
-        document.getElementById('marker4').classList.add('invisible');
-        document.getElementById('beacon4').classList.remove('visible');
-        document.getElementById('beacon4').classList.add('invisible');
-        document.getElementById('marker5').classList.remove('visible');
-        document.getElementById('marker5').classList.add('invisible');
-        document.getElementById('beacon5').classList.remove('visible');
-        document.getElementById('beacon5').classList.add('invisible');
-}});
-window.addEventListener('scroll', function () {
-    var scrollPosition = window.scrollY;
-    var video = document.getElementById('v1');
-    if (scrollPosition < 10000) {
-        video.style.zIndex = '0';
-        document.getElementById('v1').classList.add('slide-off');
-        document.getElementById('v1').classList.remove('slide-in');
-    }
-    else{
-        video.style.zIndex = '16'
-    }
-});
-
-//épingles apparition
-
-window.addEventListener('scroll', function () {
-    var scrollPosition = window.scrollY;
-    if (scrollPosition >= 20000) {
-        document.getElementById('marker20').classList.add('visible');
-        document.getElementById('marker20').classList.remove('invisible');
-        document.getElementById('beacon20').classList.add('visible');
-        document.getElementById('beacon20').classList.remove('invisible');
-        document.getElementById('marker21').classList.add('visible');
-        document.getElementById('marker21').classList.remove('invisible');
-        document.getElementById('beacon21').classList.add('visible');
-        document.getElementById('beacon21').classList.remove('invisible');
-        document.getElementById('marker22').classList.add('visible');
-        document.getElementById('marker22').classList.remove('invisible');
-        document.getElementById('beacon22').classList.add('visible');
-        document.getElementById('beacon22').classList.remove('invisible');
-        document.getElementById('marker23').classList.add('visible');
-        document.getElementById('marker23').classList.remove('invisible');
-        document.getElementById('beacon23').classList.add('visible');
-        document.getElementById('beacon23').classList.remove('invisible');
-    }
-    if (scrollPosition >= 23000) {
-        document.getElementById('marker20').classList.add('invisible');
-        document.getElementById('marker20').classList.remove('visible');
-        document.getElementById('beacon20').classList.add('invisible');
-        document.getElementById('beacon20').classList.remove('visible');
-        document.getElementById('marker21').classList.add('invisible');
-        document.getElementById('marker21').classList.remove('visible');
-        document.getElementById('beacon21').classList.add('invisible');
-        document.getElementById('beacon21').classList.remove('visible');
-        document.getElementById('marker22').classList.add('invisible');
-        document.getElementById('marker22').classList.remove('visible');
-        document.getElementById('beacon22').classList.add('invisible');
-        document.getElementById('beacon22').classList.remove('visible');
-        document.getElementById('marker23').classList.add('invisible');
-        document.getElementById('marker23').classList.remove('visible');
-        document.getElementById('beacon23').classList.add('invisible');
-        document.getElementById('beacon23').classList.remove('visible');
-    }
-    if (scrollPosition < 20000) {
-        document.getElementById('marker20').classList.add('invisible');
-        document.getElementById('marker20').classList.remove('visible');
-        document.getElementById('beacon20').classList.add('invisible');
-        document.getElementById('beacon20').classList.remove('visible');
-        document.getElementById('marker21').classList.add('invisible');
-        document.getElementById('marker21').classList.remove('visible');
-        document.getElementById('beacon21').classList.add('invisible');
-        document.getElementById('beacon21').classList.remove('visible');
-        document.getElementById('marker22').classList.add('invisible');
-        document.getElementById('marker22').classList.remove('visible');
-        document.getElementById('beacon22').classList.add('invisible');
-        document.getElementById('beacon22').classList.remove('visible');
-        document.getElementById('marker23').classList.add('invisible');
-        document.getElementById('marker23').classList.remove('visible');
-        document.getElementById('beacon23').classList.add('invisible');
-        document.getElementById('beacon23').classList.remove('visible');
-    }
-});

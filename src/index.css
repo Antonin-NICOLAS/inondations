@@ -27,9 +27,11 @@ html [data-theme='dark'] {
 }
 
 body {
-  height: 36000px;
+  height: 34000px;
   width: 100%;
   position: relative;
+  margin: 0;
+  padding: 0;
   top: 0;
   left: 0;
 }
@@ -55,8 +57,8 @@ video {
   background: #ed1f34;
   z-index: 12;
   position: fixed;
-  left: 58%;
-  top: 53%;
+  left: 57%;
+  top: 56%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 0;
@@ -83,8 +85,8 @@ video {
 #beacon {
   position: fixed;
   z-index: 11;
-  top: 53%;
-  left: 58%;
+  top: 56%;
+  left: 57%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -150,8 +152,8 @@ video {
   background: #ed1f34;
   z-index: 12;
   position: fixed;
-  left: 53%;
-  top: 60%;
+  left: 52%;
+  top: 63%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
 }
@@ -178,8 +180,8 @@ video {
 #beacon2 {
   position: fixed;
   z-index: 11;
-  top: 60%;
-  left: 53%;
+  top: 63%;
+  left: 52%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -220,8 +222,8 @@ video {
   background: #ed1f34;
   z-index: 12;
   position: fixed;
-  left: 40%;
-  top: 44%;
+  left: 37%;
+  top: 49%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 2;
@@ -248,8 +250,8 @@ video {
 #beacon3 {
   position: fixed;
   z-index: 11;
-  top: 44%;
-  left: 40%;
+  top: 49%;
+  left: 37%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -290,8 +292,8 @@ video {
   background: #ed1f34;
   z-index: 12;
   position: fixed;
-  left: 58%;
-  top: 42%;
+  left: 60%;
+  top: 43%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 3;
@@ -318,8 +320,8 @@ video {
 #beacon4 {
   position: fixed;
   z-index: 11;
-  top: 42%;
-  left: 58%;
+  top: 43%;
+  left: 60%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -360,7 +362,7 @@ video {
   background: #ed1f34;
   z-index: 12;
   position: fixed;
-  left: 40%;
+  left: 43%;
   top: 55%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
@@ -389,7 +391,7 @@ video {
   position: fixed;
   z-index: 11;
   top: 55%;
-  left: 40%;
+  left: 43%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -749,7 +751,7 @@ video2
   z-index: 18;
   position: fixed;
   left: 48%;
-  top: 53%;
+  top: 58%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 0;
@@ -779,7 +781,7 @@ video2
 #beacon20 {
   position: fixed;
   z-index: 17;
-  top: 53%;
+  top: 58%;
   left: 48%;
   height: 3em;
   width: 3em;
@@ -831,7 +833,7 @@ video2
   z-index: 20;
   position: fixed;
   left: 56%;
-  top: 59%;
+  top: 64%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 1;
@@ -840,7 +842,7 @@ video2
 #beacon21 {
   position: fixed;
   z-index: 19;
-  top: 59%;
+  top: 64%;
   left: 56%;
   height: 3em;
   width: 3em;
@@ -860,8 +862,8 @@ video2
   background: #ed1f34;
   z-index: 22;
   position: fixed;
-  left: 59%;
-  top: 70%;
+  left: 56%;
+  top: 75%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 2;
@@ -870,8 +872,8 @@ video2
 #beacon22 {
   position: fixed;
   z-index: 21;
-  top: 70%;
-  left: 59%;
+  top: 75%;
+  left: 56%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -891,7 +893,7 @@ video2
   z-index: 23;
   position: fixed;
   left: 52%;
-  top: 80%;
+  top: 85%;
   margin: -2.2em 0 0 -1.3em;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
   counter-reset: my-counter 3;
@@ -900,7 +902,7 @@ video2
 #beacon23 {
   position: fixed;
   z-index: 22;
-  top: 80%;
+  top: 85%;
   left: 52%;
   height: 3em;
   width: 3em;
@@ -1089,4 +1091,57 @@ body div p img {
   .header  h1 {
     font-size:24px;
   }
+}
+
+/*conclusion*/
+
+#concl-section{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0%;
+  transform: translateY(0%);
+  -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+  backdrop-filter: blur(15px);
+}
+#concl-section .up{
+  animation: slide-up 1s forwards;
+}
+#concl-section .down{
+  animation: slide-down 1s forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#concl-content{
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
 }
