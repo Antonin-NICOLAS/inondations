@@ -27,7 +27,7 @@ html [data-theme='dark'] {
 }
 
 body {
-  height: 21600px;
+  height: 36000px;
   width: 100%;
   position: relative;
   top: 0;
@@ -38,7 +38,7 @@ video {
   position: fixed;
   z-index: 10;
   min-width: 100%;
-  height: 100%;
+  min-height: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -641,6 +641,7 @@ audio::-webkit-media-controls-mute-button {
   height: 100%;
   min-width: 100%;
   position: fixed;
+  z-index: 16;
   top: 0;
   left: 50%;
   transform: translateX(50%);
@@ -660,7 +661,6 @@ audio::-webkit-media-controls-mute-button {
 #v1.slide-off {
   animation: slide-off 1s forwards;
 }
-
 @keyframes slide-off {
   0% {
     transform: translateX(-50%);
@@ -685,7 +685,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 12;
+  z-index: 18;
   position: fixed;
   left: 48%;
   top: 53%;
@@ -695,7 +695,7 @@ video2
 }
 
 #marker20:after, #marker21:after, #marker22:after, #marker23:after {
-  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+    counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
   text-align: center;
   content: counter(my-counter); /* affichage de la valeur du compteur */
   transform: rotate(45deg); /* rotation du chiffre */
@@ -711,7 +711,7 @@ video2
 
 #beacon20 {
   position: fixed;
-  z-index: 11;
+  z-index: 17;
   top: 53%;
   left: 48%;
   height: 3em;
@@ -757,7 +757,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 12;
+  z-index: 20;
   position: fixed;
   left: 56%;
   top: 59%;
@@ -768,7 +768,7 @@ video2
 
 #beacon21 {
   position: fixed;
-  z-index: 11;
+  z-index: 19;
   top: 59%;
   left: 56%;
   height: 3em;
@@ -786,7 +786,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 12;
+  z-index: 22;
   position: fixed;
   left: 59%;
   top: 70%;
@@ -797,7 +797,7 @@ video2
 
 #beacon22 {
   position: fixed;
-  z-index: 11;
+  z-index: 21;
   top: 70%;
   left: 59%;
   height: 3em;
@@ -816,7 +816,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 12;
+  z-index: 23;
   position: fixed;
   left: 52%;
   top: 80%;
@@ -827,7 +827,7 @@ video2
 
 #beacon23 {
   position: fixed;
-  z-index: 11;
+  z-index: 22;
   top: 80%;
   left: 52%;
   height: 3em;
@@ -851,7 +851,7 @@ video2 menus
   flex-direction: column;
   margin-bottom: 2.5%;
   width: 48.5%;
-  margin-right: 1.5%;
+  margin-left: 1.5%;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 20px;
   z-index: 9998;
@@ -908,7 +908,7 @@ video2 menus
   flex-direction: column;
   margin-bottom: 2.5%;
   width: 48.5%;
-  margin-right: 1.5%;
+  margin-left: 1.5%;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 20px;
   z-index: 9998;

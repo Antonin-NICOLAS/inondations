@@ -30,7 +30,6 @@ function avanceVideos() {
   window.requestAnimationFrame(avanceVideos);
 }
 
-
 //épingles apparition
 
 window.addEventListener('scroll', function () {
@@ -247,15 +246,14 @@ window.addEventListener('scroll', function () {
         document.getElementById('marker5').classList.add('invisible');
         document.getElementById('beacon5').classList.remove('visible');
         document.getElementById('beacon5').classList.add('invisible');
-    }
-});
+}});
 window.addEventListener('scroll', function () {
     var scrollPosition = window.scrollY;
     if (scrollPosition < 10000) {
         document.getElementById('v1').classList.add('slide-off');
+        document.getElementById('v1').classList.remove('slide-in');
     }
 });
-
 
 //épingles apparition
 
@@ -278,25 +276,41 @@ window.addEventListener('scroll', function () {
         document.getElementById('marker23').classList.remove('invisible');
         document.getElementById('beacon23').classList.add('visible');
         document.getElementById('beacon23').classList.remove('invisible');
-
-    } else {
-        document.getElementById('marker20').classList.remove('visible');
+    }
+    if (scrollPosition >= 23000) {
         document.getElementById('marker20').classList.add('invisible');
-        document.getElementById('beacon20').classList.remove('visible');
+        document.getElementById('marker20').classList.remove('visible');
         document.getElementById('beacon20').classList.add('invisible');
-        document.getElementById('marker21').classList.remove('visible');
+        document.getElementById('beacon20').classList.remove('visible');
         document.getElementById('marker21').classList.add('invisible');
-        document.getElementById('beacon21').classList.remove('visible');
+        document.getElementById('marker21').classList.remove('visible');
         document.getElementById('beacon21').classList.add('invisible');
-        document.getElementById('marker22').classList.remove('visible');
+        document.getElementById('beacon21').classList.remove('visible');
         document.getElementById('marker22').classList.add('invisible');
-        document.getElementById('beacon22').classList.remove('visible');
+        document.getElementById('marker22').classList.remove('visible');
         document.getElementById('beacon22').classList.add('invisible');
-        document.getElementById('marker23').classList.remove('visible');
+        document.getElementById('beacon22').classList.remove('visible');
         document.getElementById('marker23').classList.add('invisible');
-        document.getElementById('beacon23').classList.remove('visible');
+        document.getElementById('marker23').classList.remove('visible');
         document.getElementById('beacon23').classList.add('invisible');
-
-        document.body.style.overflowY = 'scroll';
+        document.getElementById('beacon23').classList.remove('visible');
+    }
+    if (scrollPosition < 20000) {
+        document.getElementById('marker20').classList.add('invisible');
+        document.getElementById('marker20').classList.remove('visible');
+        document.getElementById('beacon20').classList.add('invisible');
+        document.getElementById('beacon20').classList.remove('visible');
+        document.getElementById('marker21').classList.add('invisible');
+        document.getElementById('marker21').classList.remove('visible');
+        document.getElementById('beacon21').classList.add('invisible');
+        document.getElementById('beacon21').classList.remove('visible');
+        document.getElementById('marker22').classList.add('invisible');
+        document.getElementById('marker22').classList.remove('visible');
+        document.getElementById('beacon22').classList.add('invisible');
+        document.getElementById('beacon22').classList.remove('visible');
+        document.getElementById('marker23').classList.add('invisible');
+        document.getElementById('marker23').classList.remove('visible');
+        document.getElementById('beacon23').classList.add('invisible');
+        document.getElementById('beacon23').classList.remove('visible');
     }
 });
