@@ -63,10 +63,13 @@ video {
 }
 
 #marker:after {
-  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  counter-increment: my-counter;
+  /* incrémentation du compteur à chaque occurrence */
   text-align: center;
-  content: counter(my-counter); /* affichage de la valeur du compteur */
-  transform: rotate(45deg); /* rotation du chiffre */
+  content: counter(my-counter);
+  /* affichage de la valeur du compteur */
+  transform: rotate(45deg);
+  /* rotation du chiffre */
   transform-origin: center;
   width: 1em;
   height: 1em;
@@ -115,6 +118,7 @@ video {
     -webkit-transform: scale(.1);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scale(2.5);
     opacity: 0;
@@ -127,6 +131,7 @@ video {
     transform: box-shadow(0px 0px 0px 1px #ed1f34);
     opacity: 1;
   }
+
   100% {
     transform: scale(2.5);
     opacity: 0;
@@ -152,10 +157,13 @@ video {
 }
 
 #marker2:after {
-  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  counter-increment: my-counter;
+  /* incrémentation du compteur à chaque occurrence */
   text-align: center;
-  content: counter(my-counter); /* affichage de la valeur du compteur */
-  transform: rotate(45deg); /* rotation du chiffre */
+  content: counter(my-counter);
+  /* affichage de la valeur du compteur */
+  transform: rotate(45deg);
+  /* rotation du chiffre */
   transform-origin: center;
   width: 1em;
   height: 1em;
@@ -220,10 +228,13 @@ video {
 }
 
 #marker3:after {
-  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  counter-increment: my-counter;
+  /* incrémentation du compteur à chaque occurrence */
   text-align: center;
-  content: counter(my-counter); /* affichage de la valeur du compteur */
-  transform: rotate(45deg); /* rotation du chiffre */
+  content: counter(my-counter);
+  /* affichage de la valeur du compteur */
+  transform: rotate(45deg);
+  /* rotation du chiffre */
   transform-origin: center;
   width: 1em;
   height: 1em;
@@ -266,6 +277,7 @@ video {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
+
 /*marker 4*/
 #marker4 {
   transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
@@ -286,9 +298,11 @@ video {
 }
 
 #marker4:after {
-  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  counter-increment: my-counter;
+  /* incrémentation du compteur à chaque occurrence */
   text-align: center;
-  content: counter(my-counter); /* affichage de la valeur du compteur */
+  content: counter(my-counter);
+  /* affichage de la valeur du compteur */
   width: 1em;
   height: 1em;
   margin: 1em 0 0.2em 0.5em;
@@ -296,7 +310,8 @@ video {
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5), inset -2px 2px 4px hsla(0, 0, 0, .5);
-  transform: rotate(45deg); /* rotation du chiffre */
+  transform: rotate(45deg);
+  /* rotation du chiffre */
   transform-origin: center;
 }
 
@@ -353,10 +368,13 @@ video {
 }
 
 #marker5:after {
-  counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+  counter-increment: my-counter;
+  /* incrémentation du compteur à chaque occurrence */
   text-align: center;
-  content: counter(my-counter); /* affichage de la valeur du compteur */
-  transform: rotate(45deg); /* rotation du chiffre */
+  content: counter(my-counter);
+  /* affichage de la valeur du compteur */
+  transform: rotate(45deg);
+  /* rotation du chiffre */
   transform-origin: center;
   width: 1em;
   height: 1em;
@@ -400,32 +418,34 @@ video {
   animation-delay: 1s;
 }
 
-#beacon.green::before, 
-#beacon2.green::before, 
-#beacon3.green::before, 
-#beacon4.green::before, 
-#beacon5.green::before, 
-#beacon.green::after, 
-#beacon2.green::after, 
-#beacon3.green::after, 
-#beacon4.green::after, 
+#beacon.green::before,
+#beacon2.green::before,
+#beacon3.green::before,
+#beacon4.green::before,
+#beacon5.green::before,
+#beacon.green::after,
+#beacon2.green::after,
+#beacon3.green::after,
+#beacon4.green::after,
 #beacon5.green::after,
-#beacon20.green::before, 
-#beacon21.green::before, 
-#beacon22.green::before, 
-#beacon23.green::before, 
-#beacon20.green::after, 
-#beacon21.green::after, 
-#beacon22.green::after, 
+#beacon20.green::before,
+#beacon21.green::before,
+#beacon22.green::before,
+#beacon23.green::before,
+#beacon20.green::after,
+#beacon21.green::after,
+#beacon22.green::after,
 #beacon23.green::after {
   box-shadow: 0 0 0 3px #00ff00;
 }
+
 /*animation*/
-.invisible{
+.invisible {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
 .visible {
   opacity: 1;
   transform: translateY(0);
@@ -433,23 +453,24 @@ video {
 
 /*menus*/
 #menu {
-    position: fixed;
-    text-align: center;
-    overflow-y: scroll;
-    max-height: 95%;
-    padding: 10px;
-    top: 0;
-    right: -50%;
-    margin-top: 2.5%;
-    display: flex;
-    flex-direction: column;
-    width: 48.5%;
-    margin-right: 1.5%;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 20px;
-    z-index: 9998;
-    transition: transform 0.3s ease-in-out;
+  position: fixed;
+  text-align: center;
+  overflow-y: scroll;
+  max-height: 95%;
+  padding: 10px;
+  top: 0;
+  right: -50%;
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  width: 48.5%;
+  margin-right: 1.5%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  z-index: 9998;
+  transition: transform 0.3s ease-in-out;
 }
+
 #menu2 {
   position: fixed;
   text-align: center;
@@ -469,6 +490,7 @@ video {
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
+
 #menu3 {
   position: fixed;
   text-align: center;
@@ -488,6 +510,7 @@ video {
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
+
 #menu4 {
   position: fixed;
   text-align: center;
@@ -507,6 +530,7 @@ video {
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
+
 #menu5 {
   position: fixed;
   text-align: center;
@@ -527,22 +551,49 @@ video {
   transition: transform 0.3s ease-in-out;
 }
 
-#menu.show, #menu2.show, #menu4.show,#menu21.show, #menu22.show{
+#menu.show,
+#menu2.show,
+#menu4.show,
+#menu21.show,
+#menu22.show {
   transform: translateX(-103.1%);
 }
-#menu3.show, #menu5.show, #menu20.show, #menu23.show{
+
+#menu3.show,
+#menu5.show,
+#menu20.show,
+#menu23.show {
   transform: translateX(103.1%);
 }
-/*/*//*/
+
+/*/*/
+/*/
 contenu menus
 /*/
-#menu h1, #menu2 h1,#menu3 h1,#menu4 h1,#menu20 h1, #menu21 h1,#menu22 h1,#menu23 h1,#menu5 h1{
+#menu h1,
+#menu2 h1,
+#menu3 h1,
+#menu4 h1,
+#menu20 h1,
+#menu21 h1,
+#menu22 h1,
+#menu23 h1,
+#menu5 h1 {
   color: #348fc7;
   font-family: 'Sigmar One';
   line-height: 2.3vw;
   font-size: 2vw;
 }
-#menu p, #menu2 p, #menu3 p, #menu4 p, #menu5, #menu20 p, #menu21 p, #menu22 p, #menu23 p{
+
+#menu p,
+#menu2 p,
+#menu3 p,
+#menu4 p,
+#menu5,
+#menu20 p,
+#menu21 p,
+#menu22 p,
+#menu23 p {
   font-family: 'Arial', sans-serif;
   text-align: justify;
   font-size: 1.5vw;
@@ -551,7 +602,7 @@ contenu menus
 }
 
 /*audios*/
-.audio-container{
+.audio-container {
   position: sticky;
   height: 50px;
   z-index: 30;
@@ -559,16 +610,18 @@ contenu menus
   right: 2.5%;
   bottom: 0px;
 }
+
 audio {
   width: 100%;
   height: 40px;
-  background-color: #348fc7; 
+  background-color: #348fc7;
   border: none;
   border-radius: 8px;
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: #348fc7;; 
+  background-color: #348fc7;
+  ;
   border-radius: 5px;
 }
 
@@ -601,16 +654,14 @@ audio::-webkit-media-controls-mute-button {
 /*hero section*/
 .intro-section {
   position: relative;
-  background-color: rgb(1, 1, 16);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 100%;
 }
 
 .intro-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   color: #c6c7b8;
   text-align: center;
   z-index: 1;
@@ -624,6 +675,8 @@ audio::-webkit-media-controls-mute-button {
 .intro-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #enter-btn {
@@ -637,8 +690,8 @@ audio::-webkit-media-controls-mute-button {
 
 /*video2*/
 
-#v1{
-  height: 100%;
+#v1 {
+  min-height: 100%;
   min-width: 100%;
   position: fixed;
   z-index: 16;
@@ -646,6 +699,7 @@ audio::-webkit-media-controls-mute-button {
   left: 50%;
   transform: translateX(50%);
 }
+
 #v1.slide-in {
   animation: slide-in 1s forwards;
 }
@@ -654,17 +708,21 @@ audio::-webkit-media-controls-mute-button {
   0% {
     transform: translateX(50%);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
+
 #v1.slide-off {
   animation: slide-off 1s forwards;
 }
+
 @keyframes slide-off {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(50%);
   }
@@ -672,7 +730,8 @@ audio::-webkit-media-controls-mute-button {
 
 
 
-/*/*//*/
+/*/*/
+/*/
 video2
 /*/
 
@@ -694,11 +753,17 @@ video2
   counter-reset: my-counter 0;
 }
 
-#marker20:after, #marker21:after, #marker22:after, #marker23:after {
-    counter-increment: my-counter; /* incrémentation du compteur à chaque occurrence */
+#marker20:after,
+#marker21:after,
+#marker22:after,
+#marker23:after {
+  counter-increment: my-counter;
+  /* incrémentation du compteur à chaque occurrence */
   text-align: center;
-  content: counter(my-counter); /* affichage de la valeur du compteur */
-  transform: rotate(45deg); /* rotation du chiffre */
+  content: counter(my-counter);
+  /* affichage de la valeur du compteur */
+  transform: rotate(45deg);
+  /* rotation du chiffre */
   transform-origin: center;
   width: 1em;
   height: 1em;
@@ -742,11 +807,15 @@ video2
   animation: active 2s infinite linear;
 }
 
-#beacon20:after,#beacon21:after,#beacon22:after,#beacon23:after {
+#beacon20:after,
+#beacon21:after,
+#beacon22:after,
+#beacon23:after {
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
+
 /*beacon21*/
 #marker21 {
   transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
@@ -776,6 +845,7 @@ video2
   border-radius: 50%;
   transform: translateX(-50%);
 }
+
 /*beacon22*/
 #marker22 {
   transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
@@ -835,7 +905,9 @@ video2
   border-radius: 50%;
   transform: translateX(-50%);
 }
-/*/*//*/
+
+/*/*/
+/*/
 video2 menus
 /*/
 #menu20 {
@@ -857,6 +929,7 @@ video2 menus
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
+
 #menu21 {
   position: fixed;
   text-align: center;
@@ -876,6 +949,7 @@ video2 menus
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
+
 #menu22 {
   position: fixed;
   text-align: center;
@@ -895,6 +969,7 @@ video2 menus
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
+
 #menu23 {
   position: fixed;
   text-align: center;
@@ -914,6 +989,102 @@ video2 menus
   z-index: 9998;
   transition: transform 0.3s ease-in-out;
 }
-body div p img{
+
+body div p img {
   width: 100%;
+}
+
+/*waves*/
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.header .logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.header .inner-header {
+  height:30vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+.header .small-inner {
+  display: inline;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header  .flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header  .waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.header .content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: rgb(0, 0, 0);
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .header  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .header  .content {
+    height:30vh;
+  }
+  .header  h1 {
+    font-size:24px;
+  }
 }
