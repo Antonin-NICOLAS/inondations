@@ -249,9 +249,14 @@ window.addEventListener('scroll', function () {
 }});
 window.addEventListener('scroll', function () {
     var scrollPosition = window.scrollY;
+    var video = document.getElementById('v1');
     if (scrollPosition < 10000) {
+        video.style.zIndex = '0';
         document.getElementById('v1').classList.add('slide-off');
         document.getElementById('v1').classList.remove('slide-in');
+    }
+    else{
+        video.style.zIndex = '16'
     }
 });
 
