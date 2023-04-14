@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && curl https://storage.googleapis.com/earthstudio/roquebillere_dezoom.mp4 --output dist/medias/roquebilliere_dezoom.mp4 node copy-glb.cjs",
+    "build": "vite build && curl https://storage.googleapis.com/earthstudio/roquebillere_dezoom.mp4 --output dist/medias/roquebilliere_dezoom.mp4 && node copy-glb.cjs",
     "start": "node server.cjs",
     "preview": "vite preview",
     "all": "vite build && curl https://storage.googleapis.com/earthstudio/roquebillere_dezoom.mp4 --output dist/medias/roquebilliere_dezoom.mp4 && node copy-glb.cjs && node server.cjs"
