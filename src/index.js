@@ -115,7 +115,6 @@ window.addEventListener('scroll', function () {
         document.getElementById('concl-section').classList.add('down');
         document.getElementById('concl-section').classList.remove('up');
     }
-    console.log(scrollPosition)
 });
 //épingles apparition
 

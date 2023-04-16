@@ -683,15 +683,6 @@ audio::-webkit-media-controls-mute-button {
   margin-right: 10%;
 }
 
-#enter-btn {
-  background-color: rgb(1, 1, 16);
-  color: #c6c7b8;
-  font-size: 1.5rem;
-  border: rgb(1, 1, 16);
-  padding: 1rem 2rem;
-  cursor: pointer;
-}
-
 /*video2*/
 
 #v1 {
@@ -1144,4 +1135,76 @@ body div p img {
   color: #fff;
   justify-content: center;
   align-items: center;
+}
+
+/*button*/
+.enter-btn{
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #00aeff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.enter-btn span{
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+}
+.enter-btn .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #00aeff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.enter-btn .liquid::after,
+.enter-btn .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.enter-btn .liquid::before {
+  
+  border-radius: 45%;
+  background: rgb(255, 255, 255);
+  animation: water 5s linear infinite;
+}
+
+.enter-btn .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: water 10s linear infinite;
+}
+
+.enter-btn:hover .liquid{
+  top: -100px;
+}
+.enter-btn:hover{
+  border: 2px solid #1500ff;
+  color: #1500ff;
+}
+
+@keyframes water {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }
