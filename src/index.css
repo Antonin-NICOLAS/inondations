@@ -42,7 +42,8 @@ video {
   min-width: 100%;
   min-height: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*marker 1*/
@@ -658,6 +659,7 @@ audio::-webkit-media-controls-mute-button {
 /*hero section*/
 .intro-section {
   position: relative;
+  z-index: 11;
   background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 100%;
@@ -690,9 +692,6 @@ audio::-webkit-media-controls-mute-button {
   min-width: 100%;
   position: fixed;
   z-index: 16;
-  top: 0;
-  left: 50%;
-  transform: translateX(50%);
 }
 
 #v1.slide-in {
