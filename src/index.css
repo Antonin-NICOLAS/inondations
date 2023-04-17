@@ -36,6 +36,208 @@ body {
   left: 0;
 }
 
+
+/*hero section*/
+.intro-section {
+  position: relative;
+  z-index: 9000;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100%;
+}
+
+.intro-content {
+  width: 100%;
+  height: 100%;
+  color: #c6c7b8;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro-content h1 {
+  font-size: calc(12px + 1vw);
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  font-size: calc(10px + 0.7vw);
+  margin-bottom: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/*waves*/
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.header .logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.header .inner-header {
+  height:30vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+.header .small-inner {
+  display: inline;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header  .flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header  .waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.header .content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: rgb(0, 0, 0);
+}
+
+/*Shrinking for mobile*/
+
+@media (max-width: 900px) {
+  .header .inner-header {
+    height: 20vh;
+  }
+}
+@media (max-width: 768px) {
+  .header  .waves {
+    height:40px;
+    min-height:40px;
+  }
+}
+@media (max-width: 600px) {
+  .header  .inner-header {
+    height: 10vh;
+  }
+}
+
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*button*/
+.enter-btn{
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #00aeff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.enter-btn span{
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+}
+.enter-btn .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #00aeff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.enter-btn .liquid::after,
+.enter-btn .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.enter-btn .liquid::before {
+  
+  border-radius: 45%;
+  background: rgb(255, 255, 255);
+  animation: water 5s linear infinite;
+}
+
+.enter-btn .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: water 10s linear infinite;
+}
+
+.enter-btn:hover .liquid{
+  top: -100px;
+}
+.enter-btn:hover{
+  border: 2px solid #1500ff;
+  color: #1500ff;
+}
+
+@keyframes water {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
 /*marker 1*/
 #marker {
   transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
@@ -619,13 +821,6 @@ audio::-webkit-media-controls-panel {
   ;
   border-radius: 5px;
 }
-
-/* Barre de progression */
-audio::-webkit-media-controls-progress-bar {
-  background-color: #cfcf11;
-  height: 6px;
-}
-
 /* Barre de lecture */
 audio::-webkit-media-controls-current-time-display {
   font-size: 14px;
@@ -633,46 +828,6 @@ audio::-webkit-media-controls-current-time-display {
 
 audio::-webkit-media-controls-time-remaining-display {
   font-size: 14px;
-}
-
-/* Bouton de volume */
-audio::-webkit-media-controls-volume-slider {
-  height: 6px;
-  background-color: #ccc;
-}
-
-audio::-webkit-media-controls-mute-button {
-  display: none;
-}
-
-
-/*hero section*/
-.intro-section {
-  position: relative;
-  z-index: 9000;
-  background-color: rgb(255, 255, 255);
-  height: 100vh;
-  width: 100%;
-}
-
-.intro-content {
-  width: 100%;
-  height: 100%;
-  color: #c6c7b8;
-  text-align: center;
-  z-index: 1;
-}
-
-.intro-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.intro-content p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 #v0 {
@@ -991,101 +1146,6 @@ body div p img {
   width: 100%;
 }
 
-/*waves*/
-
-.header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
-}
-.header .logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-}
-
-.header .inner-header {
-  height:30vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
-.header .small-inner {
-  display: inline;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
-
-.header  .flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.header  .waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
-
-.header .content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: rgb(0, 0, 0);
-}
-
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .header  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .header  .content {
-    height:30vh;
-  }
-  .header  h1 {
-    font-size:24px;
-  }
-}
-
 /*conclusion*/
 
 #concl-section{
@@ -1131,82 +1191,11 @@ body div p img {
   width: 80%;
   height: 80%;
   margin: 10%;
-  font-size: 2vw;
+  font-size: calc(10px + 1vw);
   display: flex;
   flex-direction: column;
   color: #fff;
   justify-content: center;
   align-items: center;
-}
-
-/*button*/
-.enter-btn{
-  position: relative;
-  display: inline-block;
-  padding: 10px 30px;
-  border: 2px solid #00aeff;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #000;
-  text-decoration: none;
-  overflow: hidden;
-}
-
-.enter-btn span{
-  position: relative;
-  z-index: 1;
-  transition: 1s;
-}
-.enter-btn .liquid {
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  background: #00aeff;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
-  transition: .5s;
-}
-
-.enter-btn .liquid::after,
-.enter-btn .liquid::before {
-  content: '';
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  background: #000;
-}
-
-.enter-btn .liquid::before {
-  
-  border-radius: 45%;
-  background: rgb(255, 255, 255);
-  animation: water 5s linear infinite;
-}
-
-.enter-btn .liquid::after {
-  
-  border-radius: 40%;
-  background: rgba(255, 255, 255, 0.5);
-  animation: water 10s linear infinite;
-}
-
-.enter-btn:hover .liquid{
-  top: -100px;
-}
-.enter-btn:hover{
-  border: 2px solid #1500ff;
-  color: #1500ff;
-}
-
-@keyframes water {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
-  }
+  text-align: justify;
 }
