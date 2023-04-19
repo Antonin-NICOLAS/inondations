@@ -238,6 +238,41 @@ body {
   }
 }
 
+#popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11000;
+  background-color: #fff;
+  display: inline-block;
+  width: 50vw;
+  padding: calc(5px + 0.5vw);
+  border: #00aeff solid 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#popup ul{
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+#popup img{
+  width: calc(100% - 2*(5px + 0.5vw));
+}
+
+#popup button{
+  margin-right: calc(5px + 0.5vw);
+  margin-left: calc(100% - (30px + 3vw) - (5px + 0.5vw));
+  width: calc(30px + 3vw);
+  height: calc(10px + 1vw);
+  background-color: #348fc7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
 /*marker 1*/
 #marker {
   transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
@@ -978,7 +1013,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 20;
+  z-index: 18;
   position: fixed;
   left: 56%;
   top: 64%;
@@ -989,7 +1024,7 @@ video2
 
 #beacon21 {
   position: fixed;
-  z-index: 19;
+  z-index: 17;
   top: 64%;
   left: 56%;
   height: 3em;
@@ -1008,7 +1043,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 22;
+  z-index: 18;
   position: fixed;
   left: 56%;
   top: 75%;
@@ -1019,7 +1054,7 @@ video2
 
 #beacon22 {
   position: fixed;
-  z-index: 21;
+  z-index: 17;
   top: 75%;
   left: 56%;
   height: 3em;
@@ -1038,7 +1073,7 @@ video2
   width: 40px;
   height: 40px;
   background: #ed1f34;
-  z-index: 23;
+  z-index: 18;
   position: fixed;
   left: 52%;
   top: 85%;
@@ -1049,7 +1084,7 @@ video2
 
 #beacon23 {
   position: fixed;
-  z-index: 22;
+  z-index: 17;
   top: 85%;
   left: 52%;
   height: 3em;

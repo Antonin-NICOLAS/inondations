@@ -286,11 +286,16 @@ toggleMenu();
 //hero section
 const introSection = document.querySelector('.intro-section');
 const enterBtn = document.getElementById('enter-btn');
+const closeBtn = document.getElementById('closepopup');
 const body = document.querySelector('body');
 
 enterBtn.addEventListener('click', function () {
     introSection.style.display = 'none';
     body.style.overflow = 'visible';
+    document.getElementById("popup").style.display = "block";
+});
+closeBtn.addEventListener('click', function () {
+    document.getElementById("popup").style.display = "none";
 });
 
 body.style.overflow = 'hidden';
