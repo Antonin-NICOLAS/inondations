@@ -8,15 +8,21 @@
     "build": "vite build && curl https://storage.googleapis.com/earthstudio/roquebillere_dezoom.mp4 --output src/medias/roquebillere_dezoom.mp4 && node copy-glb.cjs",
     "start": "node server.cjs",
     "preview": "vite preview",
-    "all": "vite build && curl https://storage.googleapis.com/earthstudio/roquebillere_dezoom.mp4 --output src/medias/roquebillere_dezoom.mp4 && node copy-glb.cjs && node server.cjs"
+    "prefix": "postcss ./src/index.css --use autoprefixer -d ./src/indexp.css",
+    "all": "vite build postcss && curl https://storage.googleapis.com/earthstudio/roquebillere_dezoom.mp4 --output src/medias/roquebillere_dezoom.mp4 && node copy-glb.cjs && node server.cjs"
   },
+  "authors": "Antonin NICOLAS, Robert MACYGAN",
+  "browserslist": "last 4 versions",
   "dependencies": {
     "@splinetool/loader": "^0.9.214",
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.293",
     "aos": "^2.3.4",
+    "autoprefixer": "^10.4.14",
     "express": "^4.18.2",
     "fs-extra": "^11.1.1",
+    "postcss": "^8.4.22",
+    "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "scrollmagic": "^2.0.8",

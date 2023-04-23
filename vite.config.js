@@ -23,6 +23,7 @@ export default {
             inondations: resolve(__dirname, 'src/inondations.html'),
             apropos: resolve(__dirname, 'src/a-propos.html'),
             contact: resolve(__dirname, 'src/contacts.html'),
+            error404: resolve(__dirname, 'src/404.html')
           },
         },
     },
