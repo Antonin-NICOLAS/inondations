@@ -8,9 +8,19 @@ let position2 = 0;
 const vitesse2 = 1200;
 const video2 = document.getElementById("v1");
 
-window.requestAnimationFrame(avanceVideos);
+let ticking = false;
 
-function avanceVideos() {
+window.addEventListener('scroll', function (e) {
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            synchroniserVideos();
+            ticking = false;
+        });
+    }
+    ticking = true;
+});
+
+function synchroniserVideos() {
     let scrollPosition = window.pageYOffset;
 
     // syncroniser video 1
@@ -26,9 +36,12 @@ function avanceVideos() {
             video2.currentTime = position2;
         }
     }
-
-    window.requestAnimationFrame(avanceVideos);
 }
+
+if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+    // Pour Safari sur iOS/ipadOS
+    video1.setAttribute("autoplay");
+} 
 
 //épingles apparition
 
@@ -138,7 +151,7 @@ window.addEventListener('scroll', function () {
         document.getElementById('beacon23').classList.add('visible');
         document.getElementById('beacon23').classList.remove('invisible');
     }
-    else{
+    else {
         document.getElementById('marker20').classList.add('invisible');
         document.getElementById('marker20').classList.remove('visible');
         document.getElementById('beacon20').classList.add('invisible');
@@ -288,10 +301,12 @@ const introSection = document.querySelector('.intro-section');
 const enterBtn = document.getElementById('enter-btn');
 const closeBtn = document.getElementById('closepopup');
 const body = document.querySelector('body');
+const html = document.querySelector('html');
 
 enterBtn.addEventListener('click', function () {
     introSection.style.display = 'none';
     body.style.overflow = 'visible';
+    html.style.overflow = 'visible';
     document.getElementById("popup").style.display = "block";
 });
 closeBtn.addEventListener('click', function () {
@@ -299,3 +314,4 @@ closeBtn.addEventListener('click', function () {
 });
 
 body.style.overflow = 'hidden';
+html.style.overflow = 'hidden';
