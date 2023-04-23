@@ -1,25 +1,57 @@
 var $element = $(".navigation");
 var elementWidth = $element.outerWidth();
 var elementHeight = $element.outerHeight();
-var windowWidth = $(window).width();
-var windowHeight = $(window).height();
-var viewportX = $element.offset().left - $(window).scrollLeft();
-var viewportY = $element.offset().top - $(window).scrollTop();
+var viewportX = $element.offset().left;
+var viewportY = $element.offset().top;
 
-$element.css('position', 'absolute');
-
-$(window).on('resize', function() {
-  windowWidth = $(window).width();
-  windowHeight = $(window).height();
+$element.css({
+  position: 'fixed',
+  top: viewportY,
+  left: viewportX
 });
 
-$(window).on('scroll', function() {
-  var scrollTop = $(window).scrollTop();
-  var scrollLeft = $(window).scrollLeft();
+$element.draggable({
+  containment: "window",
+  scroll: false,
+  drag: function (event, ui) {
+    var top = ui.position.top;
+    var left = ui.position.left;
+    $element.css({
+      top: Math.min(Math.max(top, 0), $(document).height() - elementHeight),
+      left: Math.min(Math.max(left, 0), $(document).width() - elementWidth)
+    });
+  }
+});
+
+$(window).on('resize', function() {
+  elementWidth = $element.outerWidth();
+  elementHeight = $element.outerHeight();
+});
+
+
+
+// draggable on mobile devices//
+var $element = $(".navigation");
+var elementWidth = $element.outerWidth();
+var elementHeight = $element.outerHeight();
+var viewportX = $element.offset().left;
+var viewportY = $element.offset().top;
+
+$element.css({
+  position: 'fixed',
+  top: viewportY,
+  left: viewportX
+});
+
+$element.on('touchmove', function(event) {
+  event.preventDefault();
+  var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+  var pageX = touch.pageX;
+  var pageY = touch.pageY;
 
   $element.css({
-    top: Math.max(viewportY + scrollTop, 0),
-    left: Math.max(viewportX + scrollLeft, 0)
+    top: pageY - (elementHeight / 2),
+    left: pageX - (elementWidth / 2)
   });
 });
 
@@ -36,24 +68,7 @@ $element.draggable({
   }
 });
 
-
-
-// draggable on mobile devices//
-var box = document.querySelector(".navigation");
-window.onload = function () {
-
-  box.addEventListener('touchmove', function (e) {
-    // grab the location of touch
-    var touchLocation = e.targetTouches[0];
-
-    // assign box new coordinates based on the touch.
-    box.style.left = touchLocation.pageX + 'px';
-    box.style.top = touchLocation.pageY + 'px';
-  })
-
-}
-box.addEventListener('touchend', function (e) {
-  // current box position.
-  var x = parseInt(box.style.left);
-  var y = parseInt(box.style.top);
-})
+$(window).on('resize', function() {
+  elementWidth = $element.outerWidth();
+  elementHeight = $element.outerHeight();
+});
